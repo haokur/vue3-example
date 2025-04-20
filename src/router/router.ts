@@ -1,6 +1,8 @@
-import Detail from "@/pages/home/detail.vue";
 import Home from "@/pages/home/home.vue";
 import List from "@/pages/home/list.vue";
+import { defineAsyncComponent } from "vue";
+
+const DetailPage = defineAsyncComponent(() => import("@/pages/home/detail.vue"));
 import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
@@ -23,7 +25,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/detail",
     name: "PageDetail",
-    component: Detail,
+    component: DetailPage,
     meta: {
       keepAlive: false,
     },

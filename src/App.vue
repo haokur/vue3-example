@@ -15,6 +15,7 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { provide, reactive, ref } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -23,5 +24,10 @@ const jumpTo = (pagePath: string) => {
     path: pagePath,
   });
 };
+
+const appConfig = { mode: "production" };
+provide("appConfig", appConfig);
+provide("appConfigRef", ref(appConfig));
+provide("appConfigReactive", reactive(appConfig));
 </script>
 <style lang="scss" scoped></style>

@@ -27,6 +27,8 @@ import ShallowTest from "@/components/ShallowTest.vue";
 import ShallowRefUse from "@/components/ShallowRefUse.vue";
 import LifeCycle from "@/components/LifeCycle.vue";
 import KeepAliveTest from "@/components/KeepAliveTest.vue";
+import WatchTest from "@/components/WatchTest.vue";
+import ProvideInject from "@/components/ProvideInject.vue";
 
 let currentTestComponent = RefVsReactive;
 const myRef = (value: any) => {
@@ -58,7 +60,9 @@ const testTypes = [
   { label: "computed测试", key: "ShallowTest", component: ShallowTest, active: false },
   { label: "shallowRef使用场景", key: "ShallowRefUse", component: ShallowRefUse, active: false },
   { label: "lifeCycle生命周期", key: "LifeCycle", component: LifeCycle, active: false },
-  { label: "keepAlive测试", key: "KeepAliveTest", component: KeepAliveTest, active: true },
+  { label: "keepAlive测试", key: "KeepAliveTest", component: KeepAliveTest, active: false },
+  { label: "watch和watchEffect", key: "WatchTest", component: WatchTest, active: false },
+  { label: "ProvideInject", key: "ProvideInject", component: ProvideInject, active: true },
 ];
 
 onMounted(() => {

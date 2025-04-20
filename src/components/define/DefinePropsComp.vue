@@ -19,12 +19,17 @@
 // });
 
 // defineProps + withDefault
-const props = defineProps<{
-  msg?: string;
-}>();
-withDefaults(props, {
-  msg: "hello from vue 3",
-});
+// const props = defineProps<{
+//   msg?: string;
+// }>();
+withDefaults(
+  defineProps<{
+    msg: string;
+  }>(),
+  {
+    msg: "hello from vue 3",
+  }
+);
 
 // defineProps<{
 //     msg:string,

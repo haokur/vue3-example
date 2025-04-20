@@ -5,6 +5,7 @@ import VueDevTools from "vite-plugin-vue-devtools";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/vue3-example",
   plugins: [vue(), VueDevTools()],
   resolve: {
     alias: {

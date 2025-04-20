@@ -14,6 +14,8 @@
       <template v-if="currentTestType === 'ProxyTypeTest'"><ProxyTypeTest /></template>
       <template v-if="currentTestType === 'Readonly'"><Readonly /></template>
       <template v-if="currentTestType === 'CustomRef'"><CustomRef /></template>
+      <template v-if="currentTestType === 'ReactiveDoc'"><ReactiveDoc /></template>
+      <template v-if="currentTestType === 'ComputedTest'"><ComputedTest /></template>
     </div>
   </div>
 </template>
@@ -25,6 +27,8 @@ import ProxyToTest from "@/components/ProxyToTest.vue";
 import ProxyTypeTest from "@/components/ProxyTypeTest.vue";
 import Readonly from "@/components/Readonly.vue";
 import CustomRef from "@/components/CustomRef.vue";
+import ReactiveDoc from "@/components/ReactiveDoc.vue";
+import ComputedTest from "@/components/ComputedTest.vue";
 
 const currentTestType = ref();
 const testTypes = [
@@ -33,7 +37,9 @@ const testTypes = [
   { label: "to的API", key: "ProxyToTest", active: false },
   { label: "类型的测试", key: "ProxyTypeTest", active: false },
   { label: "只读测试", key: "Readonly", active: false },
-  { label: "自定义ref", key: "CustomRef", active: true },
+  { label: "自定义ref", key: "CustomRef", active: false },
+  { label: "响应式文档测试", key: "ReactiveDoc", active: false },
+  { label: "computed测试", key: "ComputedTest", active: true },
 ];
 
 onMounted(() => {
